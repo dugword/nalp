@@ -1,0 +1,6 @@
+perl -pe '$\="\n"' :: nalp -pe '$_ += "\n"'
+perl -pe '$_ .= "\n" unless /^$/' :: nalp -pe '$_ && ($_ += "\n")'
+perl -pe '$_.="\n\n"' :: nalp -pe '$_+="\n\n"'
+perl -pe '$_.="\n"x7' :: nalp -pe '$_ += "\n".repeat(7)'
+perl -pe 's//\n/' :: nalp -Pe '"\n" + $_'
+perl -ne 'print unless /^$/' :: nalp -ne '$_ && console.log($_)'
