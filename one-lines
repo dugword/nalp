@@ -4,3 +4,5 @@ perl -pe '$_.="\n\n"' :: nalp -pe '$_+="\n\n"'
 perl -pe '$_.="\n"x7' :: nalp -pe '$_ += "\n".repeat(7)'
 perl -pe 's//\n/' :: nalp -Pe '"\n" + $_'
 perl -ne 'print unless /^$/' :: nalp -ne '$_ && console.log($_)'
+perl -00pe0 :: ???
+perl -00 -pe '$_.="\n"x4' :: ???

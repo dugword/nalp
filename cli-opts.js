@@ -262,7 +262,7 @@ const opts = {
     perlMode: {
         long: 'perl-mode',
         description: 'Enable perl like functions',
-        implemented: false,
+        implemented: true,
     },
     slurp: {
         long: 'slurp',

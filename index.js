@@ -33,6 +33,25 @@ if (flags.debugNalp) {
     console.log(program);
 }
 
+let $_;
+if (flags.perlMode) {
+    global.say = function say(...args) {
+        if (!args.length) {
+            console.log($_);
+        }
+        else {
+            console.log(...args);
+        }
+    }
+
+    global.print = function say(...args) {
+        if (!args.length) {
+            process.stdout.write($_);
+        }
+
+    }
+}
+
 if (flags.loop) {
     process.stdin.setEncoding('utf8');
     const readline = require('readline');
@@ -43,7 +62,7 @@ if (flags.loop) {
     eval(begin);
 
     rl.on('line', (line) => {
-        let $_ = line;
+        $_ = line;
         const programFileResult = eval(programFile);
         flags.print && console.log($_);
         flags.printResult && console.log(programFileResult);
