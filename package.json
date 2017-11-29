@@ -1,6 +1,6 @@
 {
   "name": "nalp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A CLI tool that brings perl CLI switches to node",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,7 @@
   "author": "Douglas L. Jenkins <dougljenkins@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "getopt-long": "^0.1.0",
     "tape": "^4.8.0"
   },
   "devDependencies": {
