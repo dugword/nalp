@@ -105,6 +105,12 @@ const opts = {
       loop: true,
     }
   },
+  printTrue: {
+    long: 'print-true',
+    short: 'T',
+    description: 'Only print lines with -p or -P if the last expression is true',
+    implemented: true,
+  },
   parseSwitch: {
     long: 'parse-switch',
     short: 's',
@@ -125,7 +131,7 @@ const opts = {
   },
   taintCheck: {
     long: 'taint-check',
-    short: 'T',
+    // short: 'T', // stole this for print if True
     description: 'Enable tainting checks',
     implemented: false,
   },

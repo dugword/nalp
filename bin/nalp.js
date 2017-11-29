@@ -8,6 +8,7 @@
 
     TODO:
     p should imply n
+    add print if true
 */
 
 const readline = require('readline');
@@ -70,10 +71,18 @@ if (flags.loop) {
     const programFileResult = eval(programFile);
 
     if (flags.print) {
+      if (flags.printTrue && !programFileResult) {
+        return;
+      }
+
       console.log($_);
     }
 
     if (flags.printResult) {
+      if (flags.printTrue && !programFileResult) {
+        return;
+      }
+
       console.log(programFileResult);
     }
   }).on('close', () => {
